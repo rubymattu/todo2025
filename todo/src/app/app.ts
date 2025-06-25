@@ -42,7 +42,7 @@ export class App {
   }
 
   get items(): readonly TodoItem[] {
-    return this.list.items.filter(item => !item.complete);
+    return this.list.items.filter(item => this.showComplete || !item.complete);
   }
   
   addItem(newItem: string) {
@@ -50,5 +50,5 @@ export class App {
       this.list.addItem(newItem);
     }    
   }
-
+  showComplete: boolean = false;
 }
