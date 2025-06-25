@@ -4,11 +4,9 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { App } from './app';
 
 @NgModule({
-  declarations: [
-    App
-  ],
+  
   imports: [
-    BrowserModule
+    BrowserModule, App
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
